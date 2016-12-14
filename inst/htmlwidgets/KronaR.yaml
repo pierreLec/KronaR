@@ -1,0 +1,5 @@
+dependencies:
+  - name: Krona
+    version: 2.7
+    src: "htmlwidgets/lib/K2.7"
+    script: krona-2.0.js
