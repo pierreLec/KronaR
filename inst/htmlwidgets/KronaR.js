@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'KronaR',
+  name: 'Krona',
 
   type: 'output',
 
@@ -12,7 +12,7 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-               // TODO: code to render the widget, e.g.
+        // TODO: code to render the widget, e.g.
         // initialise the page 
         while (el.firstChild) {
             el.removeChild(el.firstChild);
@@ -115,6 +115,7 @@ HTMLWidgets.widget({
         //addData();
         //window.onload = addData;
         addData();
+
 
       },
 
