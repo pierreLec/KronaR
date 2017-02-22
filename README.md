@@ -18,7 +18,7 @@ Installation
 You can install the KronaR package from Github as follows:
 
 ```r
-devtools::install_git("https://github.pasteur.fr/pierreLec/KronaR.git")
+devtools::install_git("https://github.com/pierreLec/KronaR")
 ```
 
 Usage
@@ -26,8 +26,6 @@ Usage
 
 The `KronaR` function takes an xml file
 ```r
-library(KronaR)
-
 library(KronaR)
 importT <-system.file("src/text.txt",package = "KronaR")
 dat <-read.csv(importT,header = FALSE, sep = "\t")
