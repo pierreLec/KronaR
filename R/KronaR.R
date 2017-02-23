@@ -23,11 +23,11 @@ KronaR <- function(data, width = NULL, height = NULL, elementId = NULL) {
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'Krona',
+    name = 'KronaR',
     x,
     width = width,
     height = height,
-    package = 'Krona',
+    package = 'KronaR',
     elementId = elementId
   )
 }
