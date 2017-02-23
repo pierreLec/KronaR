@@ -10,7 +10,7 @@ KronaR <- function(data, width = NULL, height = NULL, elementId = NULL) {
   # forward options using x
   dataString<-paste(apply(data,1,paste,collapse="\t"),collapse = "\n")
   #dataString<-data
-  importT <-system.file("src/ImportText.pl", package = "Krona")
+  importT <-system.file("src/ImportText.pl", package = "KronaR")
   #cmd<-paste("echo '",dataString,"'|",importT,sep=" ")
 
   cmd<-paste("echo '",dataString,"'| ",importT," 2>&1 ")
