@@ -45,7 +45,7 @@ KronaR <- function(data, width = NULL, height = NULL, elementId = NULL) {
 #'
 #' @export
 KronaROutput <- function(outputId, width = '100%', height = '100%'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'KronaR', width, height, package = 'KronaR')
+  htmlwidgets::shinyWidgetOutput(outputId, 'KronaR', width = '100%', height = '100%', package = 'KronaR')
 }
 
 #' @rdname KronaR-shiny
