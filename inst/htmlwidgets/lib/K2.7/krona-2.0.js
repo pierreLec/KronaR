@@ -5742,7 +5742,7 @@ function setCallBacks()
 	
 	image = document.getElementById('hiddenImage');
 	
-	if ( image.complete )
+	/*if ( image.complete )
 	{
 		hiddenPattern = context.createPattern(image, 'repeat');
 	}
@@ -5752,7 +5752,7 @@ function setCallBacks()
 		{
 			hiddenPattern = context.createPattern(image, 'repeat');
 		}
-	}
+	}*/
 	
 	var loadingImageElement = document.getElementById('loadingImage');
 	
