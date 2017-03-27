@@ -2,12 +2,12 @@
 // 
 // PURPOSE
 // 
-// Krona is a flexible tool for exploring the relative proportions of
+// KronaR is a flexible tool for exploring the relative proportions of
 // hierarchical data, such as metagenomic classifications, using a
 // radial, space-filling display. It is implemented using HTML5 and
 // JavaScript, allowing charts to be explored locally or served over the
 // Internet, requiring only a current version of any major web
-// browser. Krona charts can be created using an Excel template or from
+// browser. KronaR charts can be created using an Excel template or from
 // common bioinformatic formats using the provided conversion scripts.
 // 
 // 
@@ -3510,6 +3510,7 @@ function addOptionElement(position, innerHTML, title)
 function addOptionElements(hueName, hueDefault)
 {
 	options = document.createElement('div');
+	//options =document.getElementById('options');
 	options.style.position = 'absolute';
 	options.style.top = '0px';
 	options.addEventListener('mousedown', function(e) {mouseClick(e)}, false);
@@ -3557,7 +3558,7 @@ value="&harr;" title="Expand this wedge to become the new focus of the chart"/><
 	position = addOptionElement
 	(
 		position,
-'<a style="margin:2px" target="_blank" href="https://github.com/marbl/Krona/wiki"><img style="vertical-align:middle;width:108px;height:30px;" src="' + logoImage + '"/></a><input type="button" id="back" value="&larr;" title="Go back (Shortcut: &larr;)"/>\
+'<a style="margin:2px" targe href="https://github.com/marbl/Krona/wiki"><img style="vertical-align:middle;width:108px;height:30px;" src="' + logoImage + '"/></a><input type="button" id="back" value="&larr;" title="Go back (Shortcut: &larr;)"/>\
 <input type="button" id="forward" value="&rarr;" title="Go forward (Shortcut: &rarr;)"/> \
 &nbsp;Search: <input type="text" id="search"/>\
 <input id="searchClear" type="button" value="x" onclick="clearSearch()"/> \
@@ -4835,7 +4836,7 @@ function createCanvas()
 
 function load()
 {
-	console.log("KRONA LOAD()");
+	/*console.log("KRONA LOAD()");
 	document.body.style.overflow = "hidden";
 	document.body.style.margin = 0;
 	
@@ -4859,8 +4860,9 @@ function load()
 		return;
 	}
 	
-	resize();
-	
+	resize();*/
+	createCanvas();
+
 	var kronaElement = document.getElementsByTagName('krona')[0];
 	
 	var magnitudeName;
@@ -5964,22 +5966,24 @@ function enableData()
 
 function showData(indexData, indexAttribute, summary)
 {
-	var dataWindow = window.open('', '_blank');
+	//var dataWindow = window.open('', '_blank');
 	var title = 'Krona - ' + attributes[indexAttribute].displayName + ' - ' + focusNode.name;
 	dataWindow.document.title = title;
 	
 	nodeData = new Array();
 	
-	if ( dataWindow && dataWindow.document && dataWindow.document.body != null )
-	{
+	//if ( dataWindow && dataWindow.document && dataWindow.document.body != null )
+	//{
 		//var loadImage = document.createElement('img');
 		//loadImage.src = "file://localhost/Users/ondovb/Krona/KronaTools/img/loading.gif";
 		//loadImage.id = "loading";
 		//loadImage.alt = "Loading...";
 		//dataWindow.document.body.appendChild(loadImage);
-		dataWindow.document.body.innerHTML =
+
+		//dataWindow.document.body.innerHTML =
+		document.body.innerHTML =
 			'<img id="loading" src="' + loadingImage + '" alt="Loading..."></img>';
-	}
+	//}
 	
 	var scripts = document.createElement('div');
 	scripts.id = 'data';

@@ -27,21 +27,22 @@ HTMLWidgets.widget({
 
         //body.setAttribute("onload","addData()");
 
-        body.innerHTML ="<body style='padding:0;position:relative'>\
-                      <img id='hiddenImage' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9oLCBQhNQwWVnsAAAAidEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVAgb24gYSBNYWOHqHdDAAABE0lEQVQYGQEIAff+AwAAABkAAAAAAAAA+gAAAAAAAAAAAAAAAAAAAAAAAAAMAwAAAAAAAAANAAAAAAAAAPoAAAAAAAAADAAAAAYAAAD0AwAAAPoAAAAAAAAAAAAAAPoAAAAMAAAADQAAAPoAAAD6AAAAAAAAAAAAAAAAAAAAAAwAAAAZAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAABkAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAGQAAAAwAAAAAAAAADAAAAAwAAAAABAAAAAAAAAAAAAAA8wAAAPQAAAAAAAAAAAAAAA0AAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAZRssKC5OpXwYAAAAASUVORK5CYII=' style='display:none'/>\
-                      <div id='options' style='position:absolute;left:0;top:0'>\
-                      </div>\
-                      \
-                      <div id='details' style='position:absolute;top:1%;right:2%;text-align:right;'>\
-                      </div>\
-                      \
-                      \
-                      </body>";
-                     // <img id='hiddenImage' src='http://krona.sourceforge.net/img/hidden.png' visibility='hide'/>\
-                     // <script name='tree' src='javascript/krona-2.0.js'></script>\
-                    
+        //body.innerHTML ="<body style='padding:0;position:relative'>\
+
+       
+        var img = document.createElement("img");
+          img.setAttribute( "id","hiddenImage");
+          img.setAttribute( "visibility","hide");
+          document.body.appendChild(img);       
+
+         var divdetails = document.createElement("details");
+          divdetails.setAttribute( "style","position:absolute;top:1%;right:2%;text-align:right;");
+          document.body.appendChild(divdetails);      
+          var divoptions = document.createElement("options");
+          divoptions.setAttribute( "style","position:absolute;left:0;top:0");
+          document.body.appendChild(divoptions);      
     //<script name='tree' src='http://krona.sourceforge.net/krona-1.1.js'></script>"
-        //document.get
+            //document.get
         //canvas.setAttribute( "style","width:"+width+";height:"+height);
 
         function addData() {
